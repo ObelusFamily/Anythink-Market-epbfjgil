@@ -42,8 +42,7 @@ const ItemPreview = (props) => {
         style={{ borderRadius: "20px" }}
         onError={({currentTarget}) => {
           currentTarget.onerror = null;
-          // currentTarget.src="https://a.cdn-hotels.com/gdcs/production182/d1867/fdaa00ee-f900-4f93-93f2-31b91e753583.jpg?impolicy=fcrop&w=1600&h=1066&q=medium" 
-          currentTarget.src="../../../placeholder.png";
+          currentTarget.src="/placeholder.png";
         }}
       />
       <div className="card-body">
