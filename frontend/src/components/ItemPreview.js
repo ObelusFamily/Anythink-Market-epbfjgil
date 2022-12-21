@@ -44,7 +44,7 @@ const ItemPreview = (props) => {
         // fix here
         onError={({currentTarget}) => {
           currentTarget.onerror = null;
-          currentTarget.src="/placeholder.png";
+          currentTarget.src="placeholder.png";
         }}
       />
       <div className="card-body">

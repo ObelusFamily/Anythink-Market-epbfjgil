@@ -52,7 +52,7 @@ class Item extends React.Component {
                 style={{ height: "500px", width: "100%", borderRadius: "6px" }}
                 onError={({currentTarget}) => {
                   currentTarget.onerror = null;
-                  currentTarget.src="/placeholder.png";
+                  currentTarget.src="placeholder.png";
                 }}
               />
             </div>
