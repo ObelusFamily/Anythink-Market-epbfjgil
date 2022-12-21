@@ -1,12 +1,10 @@
-import ItemMeta from "./ItemMeta";
-import CommentContainer from "./CommentContainer";
+import marked from "marked";
 import React from "react";
 import { connect } from "react-redux";
-import marked from "marked";
-import {
-  ITEM_PAGE_LOADED,
-  ITEM_PAGE_UNLOADED,
-} from "../../constants/actionTypes";
+
+import { ITEM_PAGE_LOADED, ITEM_PAGE_UNLOADED } from "../../constants/actionTypes";
+import CommentContainer from "./CommentContainer";
+import ItemMeta from "./ItemMeta";
 import { getItemAndComments } from "./utils/ItemFetcher";
 
 const mapStateToProps = (state) => ({
@@ -52,6 +50,10 @@ class Item extends React.Component {
                 alt={this.props.item.title}
                 className="item-img"
                 style={{ height: "500px", width: "100%", borderRadius: "6px" }}
+                onError={({currentTarget}) => {
+                  currentTarget.onerror = null;
+                  currentTarget.src="/placeholder.png";
+                }}
               />
             </div>
 
