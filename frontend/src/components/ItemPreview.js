@@ -1,6 +1,6 @@
 import React from "react";
-import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+import { connect, connect } from "react-redux";
+import { Link, Link } from "react-router-dom";
 
 import agent from "../agent";
 import { ITEM_FAVORITED, ITEM_UNFAVORITED } from "../constants/actionTypes";
@@ -42,6 +42,10 @@ const ItemPreview = (props) => {
         className="card-img-top item-img"
         style={{ borderRadius: "20px" }}
         // fix here
+        onError={({currentTarget}) => {
+          currentTarget.onerror = null;
+          currentTarget.src="/placeholder.png";
+        }}
       />
       <div className="card-body">
         <Link to={`/item/${item.slug}`} className="text-white">
