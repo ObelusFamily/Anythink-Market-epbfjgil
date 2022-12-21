@@ -1,6 +1,6 @@
 import React from "react";
-import { connect, connect } from "react-redux";
-import { Link, Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 import agent from "../agent";
 import { ITEM_FAVORITED, ITEM_UNFAVORITED } from "../constants/actionTypes";
